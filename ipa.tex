@@ -12,7 +12,11 @@
 \usepackage{tabularx}
 \usepackage[table]{xcolor}
 \usepackage{tikz}
+\usepackage{array}
 
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \textwidth=400pt
 \marginparwidth=90pt
 \allsectionsfont{\sffamily}
@@ -48,6 +52,7 @@
 \chapter{Standards}
 
 \chapter{ISDS}
+%Dateisicherung nicht mehr verlangt
 
 \chapter{Organisation der IPA}
 \section{Datensicherung der IPA}
@@ -63,43 +68,30 @@
 
 \begin{tabular}{ |c|c|c|c|c|c| }
     \hline
-    Nr & Riskiobeschreibung & Auswirkung & W & S & Riskio \\
+    Nr & Riskiobeschreibung & Auswirkung & W & S & Risiko \\
     \hline 
     1 & Krankheit & Weniger Arbeitstage & 3 & 2-4 & \cellcolor{red}Hoch \\
     \hline
-    2 & Datenverslust & Weniger Arbeitstage & 3 & 2-4 & \cellcolor{red}Hoch \\
+    2 & Datenverslust &Datenverlus und Zeitverzug & W2 & S4 & \cellcolor{red}Hoch \\
     \hline
-    1 & Krankheit & Weniger Arbeitstage & 3 & 2-4 & \cellcolor{red}Hoch \\
-    \hline
-    1 & Krankheit & Weniger Arbeitstage & 3 & 2-4 & \cellcolor{red}Hoch \\
-    \hline
-    1 & Krankheit & Weniger Arbeitstage & 3 & 2-4 & \cellcolor{red}Hoch \\
-    \hline
-    1 & Krankheit & Weniger Arbeitstage & 3 & 2-4 & \cellcolor{red}Hoch \\
-    \hline
-    1 & Krankheit & Weniger Arbeitstage & 3 & 2-4 & \cellcolor{red}Hoch \\
+    3 & Ausfall des Laptops & Zeistverzug & W3 & S2 & \cellcolor{yellow}Niedrig \\
     \hline
 \end{tabular}
 \newline
 \bigbreak
 \begin{flushleft}
-\begin{tabular}{ |c|c|c|c|c|c| }
+\begin{tabular}{ |c|C{5cm}|c|c|c|c| }
     \hline
-    Risiko Nr & Massnahme &  W & S & Riskio & Handlungsweise \\
+    Risiko Nr & Massnahme &  W & S & Risiko & Handlungsweise \\
     \hline 
-    1 & Krankheit & Weniger Arbeitstage & 3 & 2-4 & \cellcolor{red}Hoch \\
+    1 & Keine Risken eingehen bei Kälte, immer genug Kleidung tragen 
+    & W3 & S3 & \cellcolor{yellow}Mittel & Risikoakzeptanz \\
     \hline
-    1 & Krankheit & Weniger Arbeitstage & 3 & 2-4 & \cellcolor{red}Hoch \\
+    2 & Dateisicherungskonzept erstellen und dies strikt einhalten 
+    & W2 & S2 & \cellcolor{green}Niedrig & Risikoakzeptanz \\
     \hline
-    1 & Krankheit & Weniger Arbeitstage & 3 & 2-4 & \cellcolor{red}Hoch \\
-    \hline
-    1 & Krankheit & Weniger Arbeitstage & 3 & 2-4 & \cellcolor{red}Hoch \\
-    \hline
-    1 & Krankheit & Weniger Arbeitstage & 3 & 2-4 & \cellcolor{red}Hoch \\
-    \hline
-    1 & Krankheit & Weniger Arbeitstage & 3 & 2-4 & \cellcolor{red}Hoch \\
-    \hline
-    1 & Krankheit & Weniger Arbeitstage & 3 & 2-4 & \cellcolor{red}Hoch \\
+    3 & Sorge tragen und ein backup Gerät bereitstellen 
+    & W1 & S1 & \cellcolor{green}Niedrig & Risikoakzeptanz \\
     \hline
 \end{tabular}
     
@@ -109,17 +101,19 @@
 
 \begin{center}
 \renewcommand{\arraystretch}{2}
-\begin{tabularx}{200pt}{ |X|X|X|X| }
+\begin{tabularx}{200pt}{ |X|X|X|X|X| }
     \hline
-    \cellcolor{yellow} & \cellcolor{red} &\cellcolor{red} & \cellcolor{red} \\
+    W5 & \cellcolor{yellow} & \cellcolor{red} &\cellcolor{red} & \cellcolor{red} \\
     \hline 
-    \cellcolor{yellow} & \cellcolor{yellow} & \cellcolor{red} & \cellcolor{red}  \\
+    W4 & \cellcolor{yellow} & \cellcolor{yellow} & \cellcolor{red} & \cellcolor{red}  \\
     \hline
-    \cellcolor{green} & \cellcolor{yellow} \tikz\draw[black,fill=red] circle [radius=0.2] node {1};  & \cellcolor{yellow} & \cellcolor{red} \\
+    W3 & \cellcolor{green} & \cellcolor{yellow} \tikz\draw[black,fill=red] circle [radius=0.2] node {1};  & \cellcolor{yellow} & \cellcolor{red} \\
     \hline 
-    \cellcolor{green} & \cellcolor{green} & \cellcolor{yellow} & \cellcolor{yellow} \\
+    W2 & \cellcolor{green} & \cellcolor{green} & \cellcolor{yellow} & \cellcolor{yellow} \\
     \hline
-    \cellcolor{green} & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} \\
+    W1 & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} \\
+    \hline
+     & S1 & S2 & S3 & S4 \\
     \hline
 \end{tabularx}
 \renewcommand{\arraystretch}{1}
