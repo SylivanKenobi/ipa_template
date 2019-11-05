@@ -1,43 +1,179 @@
 \documentclass{report}
-\renewcommand{\familydefault}{\sfdefault}
 
 \usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage{amsmath}
 \usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{roboto}
+\usepackage{sectsty}
+\usepackage{lastpage}
+\usepackage{tabularx}
+\usepackage[table]{xcolor}
+\usepackage{tikz}
 
-
+\textwidth=400pt
+\marginparwidth=90pt
+\allsectionsfont{\sffamily}
+\fancypagestyle{plain}{}
+\pagestyle{fancy}
+\setlength\headheight{33pt}
+\graphicspath{{bilder/}}
+\fancyhf{} 
+\lhead{\includegraphics[width=3cm]{puzzle_tagline_blau}}  
+\rfoot{Seite \thepage \hspace{1pt} von \pageref{LastPage}}
 \title{Title}
-\author{Sylvain}    
+\author{Sylvain}
+
 \begin{document}
 
 \maketitle
 
 \tableofcontents
 
-\chapter{Das Test Kapitel}
-\section{Section 1}
-Lorem Ipsum
-\subsection{SubSec1.1}
-Lorem Ipsum
-\subsection{SubSec1.2}
-Lorem Ipsum
+\part{Ablauf Organisation und Umfeld}
+
+\chapter{Aufgabenstellung}
+\section{Titel der Arbeit}
+\section{Thematik}
+\section{Ausgangslage}
+\section{Detaillierte Aufgabenstellung}
+\section{Mittel und Methoden inklusive Projektmethode}
+\section{Vorkenntnisse}
+\section{Vorarbeiten}
+\section{Neue LerninhalteArbeiten in den letzten 6 Monaten}
 
 
-\subsection{SubSec1.3}
-Lorem Ipsum
+\chapter{Standards}
 
-\subsection{SubSec1.4}
-Lorem Ipsum
+\chapter{ISDS}
 
-\section{Section 2}
-Lorem Ipsum
+\chapter{Organisation der IPA}
+\section{Datensicherung der IPA}
+\section{Änderungskontrolle, Prüfung, Genehmigung}
 
-\subsection{SubSec2.1}
-Lorem Ipsum
+\chapter{Detailliertes Projektvorgehen}
+\subsection{Projektmethode}
+\subsection{Szenario}
+\subsection{Phasen}
+\subsection{Module}
 
-\subsection{SubSec2.2}
-Lorem Ipsum
+\section{Risikoanalyse}
 
+\begin{tabular}{ |c|c|c|c|c|c| }
+    \hline
+    Nr & Riskiobeschreibung & Auswirkung & W & S & Riskio \\
+    \hline 
+    1 & Krankheit & Weniger Arbeitstage & 3 & 2-4 & \cellcolor{red}Hoch \\
+    \hline
+    2 & Datenverslust & Weniger Arbeitstage & 3 & 2-4 & \cellcolor{red}Hoch \\
+    \hline
+    1 & Krankheit & Weniger Arbeitstage & 3 & 2-4 & \cellcolor{red}Hoch \\
+    \hline
+    1 & Krankheit & Weniger Arbeitstage & 3 & 2-4 & \cellcolor{red}Hoch \\
+    \hline
+    1 & Krankheit & Weniger Arbeitstage & 3 & 2-4 & \cellcolor{red}Hoch \\
+    \hline
+    1 & Krankheit & Weniger Arbeitstage & 3 & 2-4 & \cellcolor{red}Hoch \\
+    \hline
+    1 & Krankheit & Weniger Arbeitstage & 3 & 2-4 & \cellcolor{red}Hoch \\
+    \hline
+\end{tabular}
+\newline
+\bigbreak
+\begin{flushleft}
+\begin{tabular}{ |c|c|c|c|c|c| }
+    \hline
+    Risiko Nr & Massnahme &  W & S & Riskio & Handlungsweise \\
+    \hline 
+    1 & Krankheit & Weniger Arbeitstage & 3 & 2-4 & \cellcolor{red}Hoch \\
+    \hline
+    1 & Krankheit & Weniger Arbeitstage & 3 & 2-4 & \cellcolor{red}Hoch \\
+    \hline
+    1 & Krankheit & Weniger Arbeitstage & 3 & 2-4 & \cellcolor{red}Hoch \\
+    \hline
+    1 & Krankheit & Weniger Arbeitstage & 3 & 2-4 & \cellcolor{red}Hoch \\
+    \hline
+    1 & Krankheit & Weniger Arbeitstage & 3 & 2-4 & \cellcolor{red}Hoch \\
+    \hline
+    1 & Krankheit & Weniger Arbeitstage & 3 & 2-4 & \cellcolor{red}Hoch \\
+    \hline
+    1 & Krankheit & Weniger Arbeitstage & 3 & 2-4 & \cellcolor{red}Hoch \\
+    \hline
+\end{tabular}
+    
+\end{flushleft}
+\section{Risikomatrix}
+
+
+\begin{center}
+\renewcommand{\arraystretch}{2}
+\begin{tabularx}{200pt}{ |X|X|X|X| }
+    \hline
+    \cellcolor{yellow} & \cellcolor{red} &\cellcolor{red} & \cellcolor{red} \\
+    \hline 
+    \cellcolor{yellow} & \cellcolor{yellow} & \cellcolor{red} & \cellcolor{red}  \\
+    \hline
+    \cellcolor{green} & \cellcolor{yellow} \tikz\draw[black,fill=red] circle [radius=0.2] node {1};  & \cellcolor{yellow} & \cellcolor{red} \\
+    \hline 
+    \cellcolor{green} & \cellcolor{green} & \cellcolor{yellow} & \cellcolor{yellow} \\
+    \hline
+    \cellcolor{green} & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} \\
+    \hline
+\end{tabularx}
+\renewcommand{\arraystretch}{1}
+\end{center}
+
+\subsection{Kurze Stellungnahme zu den Risiken}
+
+\chapter{Arbeitsjournal}
+
+\chapter{Abschlussbericht}
+\section{Vergleich Ist/Soll}
+\section{Mittelbedarf}
+\section{Realisierungsbericht}
+\section{Testbericht}
+\section{Fazit zum IPA (Projekt)}
+\section{Persönliches Fazit}
+\section{Schlussreflexion}
+
+\chapter{Selbständigkeitserklärung und Rechtliches}
+
+\part{Projektdokumentation}
+
+\chapter{Analyseteil (Initialisierung nach Hernes IPA)}
+\section{Studie; Ist-Zustand}
+\section{Persönliche Vorgehensziele}
+\section{Projektziele}
+\section{Varianten}
+\section{Anforderungen}
+\subsection{Funktionale Anforderungen}
+\subsection{Nicht funktionale Anforderungen}
+\section{Variantenvorstellung}
+\subsection{Variante 1}
+\section{Variantenentscheid}
+\subsection{Begründung}
+
+\chapter{Entwurf}
+\section{Konzept entwickeln}
+\section{BSP Testkonzept und Protokoll}
+
+\chapter{Umsetzung}
+\section{System erstellen}
+
+\part{Formaler Teil 2}
+\chapter{Abbildungsverzeichnis}
+
+\chapter{Tabellenverzeichnis}
+
+\chapter{Literatur und Quellenverzeichnis}
+\section{Internet Quelle: (Achtung löschen nur BSP.)}
+\section{Literatur Quelle: (Achtung löschen nur BSP.)}
+
+\chapter{Verwendete Abkürzungen}
+
+\chapter{Glossar}
+
+\chapter{Anhänge}
 \end{document}
