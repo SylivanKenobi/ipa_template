@@ -13,10 +13,12 @@
 \usepackage[table]{xcolor}
 \usepackage{tikz}
 \usepackage{array}
+\usepackage{lipsum}
 
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\definecolor{puzzleblue}{RGB}{30,90,150}
 \textwidth=400pt
 \marginparwidth=90pt
 \allsectionsfont{\sffamily}
@@ -122,7 +124,22 @@
 \subsection{Kurze Stellungnahme zu den Risiken}
 
 \chapter{Arbeitsjournal}
-
+\section{erster Tag 1.1.1029}
+\begin{table}
+    \begin{tabular}{|L{0.6\textwidth}|C{40pt}|C{40pt}|C{40pt}|}
+        \hline
+        \rowcolor{puzzleblue!50}Tätigkeiten & Beteiligte Personen & Aufwand Geplant(Std) & Aufwand Effektiv \\
+        \hline
+        arbeit 1 & 1 & 1 & 1 \\
+    \end{tabular}
+    \begin{tabular}{|L{\textwidth}|}
+        \hline
+        Tagesablauf \\
+        \hline
+        \lipsum[3-5] \\
+        \hline
+    \end{tabular}
+\end{table}
 \chapter{Abschlussbericht}
 \section{Vergleich Ist/Soll}
 \section{Mittelbedarf}
@@ -152,7 +169,36 @@
 \chapter{Entwurf}
 \section{Konzept entwickeln}
 \section{BSP Testkonzept und Protokoll}
-
+\subsection{Testinfrastruktur}
+\subsection{Testziele}
+\subsection{Testrahmen}
+\subsection{Testvorgehen}
+\subsection{Testmethode}
+\subsection{Black-Box Tests}
+\subsection{White-Box Tests}
+\subsection{Testpersonen}
+\subsection{Testverfahren 1}
+\begin{tabular}{|l|l|}
+    \hline
+    \rowcolor{puzzleblue} \multicolumn{2}{|l|}{Testfall Nr. 1}  \\[10pt]
+    \hline
+    \textbf{Spezfikation} & \textbf{Beschreibung} \\
+    \hline
+    \rowcolor{puzzleblue!25}\textbf{Testname} & Rspec \\
+    \hline
+    \textbf{Testart} & Automatisiert \\
+    \hline
+    \rowcolor{puzzleblue!25}\textbf{Voraussetzungen} & Keine \\
+    \hline
+    \textbf{Vorbereitung} & Datenbank mit Testdaten starten \\
+    \hline
+    \rowcolor{puzzleblue!25}\textbf{Ablauf} & 1. Im Terminal rake spec eingeben \\
+    \hline
+    \textbf{Erwartetes Resultata} & Keine Fehler \\
+    \hline
+    \rowcolor{puzzleblue!25}\textbf{Erreichtes Resultat} & Keine Fehler \\
+    \hline
+\end{tabular}
 \chapter{Umsetzung}
 \section{System erstellen}
 
