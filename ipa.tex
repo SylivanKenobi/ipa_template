@@ -15,12 +15,28 @@
 \usepackage{array}
 \usepackage{lipsum}
 
+\makeatletter
+\renewcommand\listoftables{%
+    \section{\listtablename}%
+    \@mkboth{\MakeUppercase\listtablename}%
+        {\MakeUppercase\listtablename}%
+    \@starttoc{lot}%
+}
+\renewcommand\listoffigures{%
+    \section{\listfigurename}%
+    \@mkboth{\MakeUppercase\listfigurename}%
+        {\MakeUppercase\listfigurename}%
+    \@starttoc{lof}%
+}
+
+\makeatother
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
 \definecolor{puzzleblue}{RGB}{30,90,150}
 \textwidth=400pt
-\marginparwidth=90pt
+\oddsidemargin=47pt
 \allsectionsfont{\sffamily}
 \fancypagestyle{plain}{}
 \pagestyle{fancy}
@@ -29,12 +45,55 @@
 \fancyhf{} 
 \lhead{\includegraphics[width=3cm]{puzzle_tagline_blau}}  
 \rfoot{Seite \thepage \hspace{1pt} von \pageref{LastPage}}
-\title{Title}
 \author{Sylvain}
 
 \begin{document}
-
-\maketitle
+\begin{titlepage}
+  \Huge IPA Sylvain Gilgen Puzzle ITC\normalsize
+\bigbreak
+  \begin{tabular}{|R{0.2\textwidth}|L{0.7\textwidth}|}
+    \hline
+    \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\textbf{IPA-Daten}} \\[12pt]
+    \hline
+    Firma & Puzzle ITC \\
+    \hline
+    \rowcolor{puzzleblue!30}Abteilung & BBT \\
+    \hline
+    Autor & Sylvain Gilgen \\
+    \hline
+    \rowcolor{puzzleblue!30}Ausgabedatum & dd.mm.yyyy \\
+    \hline
+    Projektvorgehen & Hermes \\
+    \hline
+    \rowcolor{puzzleblue!30}Version & 0.09 \\
+    \hline
+  \end{tabular}
+  \newline \bigbreak
+  \begin{table}
+    \caption{startseite}
+  \begin{tabular}{|L{0.4\textwidth}|L{0.5\textwidth}|}
+    \hline
+    \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\textbf{Beteiligte Personen}} \\[12pt]
+    \hline
+    \textbf{In der Genehmigung} & \\
+    \hline
+    \rowcolor{puzzleblue!30}Valid Experte & Vorname Nachname \\
+    \hline
+    \textbf{In der Durchführung} & \\
+    \hline
+    \rowcolor{puzzleblue!30}Verantwortliche Fachkraft & Vorname Nachname, Rolle \\
+    \hline
+    Hauptexperte & Vorname Nachname \\
+    \hline
+    \rowcolor{puzzleblue!30}Zweit Experte & Vorname Nachname \\
+    \hline
+    \textbf{Zur Information, Kenntnis} & \\
+    \hline
+    \rowcolor{puzzleblue!30}Berufsblidner & Vorname Nachname, Rolle \\
+    \hline
+  \end{tabular}
+\end{table}
+\end{titlepage}
 
 \tableofcontents
 
@@ -67,7 +126,6 @@
 \subsection{Module}
 
 \section{Risikoanalyse}
-
 \begin{tabular}{ |c|c|c|c|c|c| }
     \hline
     Nr & Riskiobeschreibung & Auswirkung & W & S & Risiko \\
@@ -125,21 +183,15 @@
 
 \chapter{Arbeitsjournal}
 \section{erster Tag 1.1.1029}
-\begin{table}
-    \begin{tabular}{|L{0.6\textwidth}|C{40pt}|C{40pt}|C{40pt}|}
-        \hline
-        \rowcolor{puzzleblue!50}Tätigkeiten & Beteiligte Personen & Aufwand Geplant(Std) & Aufwand Effektiv \\
-        \hline
-        arbeit 1 & 1 & 1 & 1 \\
-    \end{tabular}
-    \begin{tabular}{|L{\textwidth}|}
-        \hline
-        Tagesablauf \\
-        \hline
-        \lipsum[3-5] \\
-        \hline
-    \end{tabular}
-\end{table}
+\begin{tabular}{|L{0.4\textwidth}|C{60pt}|C{60pt}|C{60pt}|}
+    \hline
+    \rowcolor{puzzleblue!50}Tätigkeiten & Beteiligte Personen & Aufwand Geplant(Std) & Aufwand Effektiv \\
+    \hline
+    arbeit 1 & 1 & 1 & 1 \\
+    \hline
+\end{tabular}
+\subsection{Tagesablauf}
+\lipsum[1-3]
 \chapter{Abschlussbericht}
 \section{Vergleich Ist/Soll}
 \section{Mittelbedarf}
@@ -203,13 +255,16 @@
 \section{System erstellen}
 
 \part{Formaler Teil 2}
-\chapter{Abbildungsverzeichnis}
 
-\chapter{Tabellenverzeichnis}
-
-\chapter{Literatur und Quellenverzeichnis}
-\section{Internet Quelle: (Achtung löschen nur BSP.)}
-\section{Literatur Quelle: (Achtung löschen nur BSP.)}
+\chapter{Verzeichnisse}
+\listoftables
+\listoffigures
+\begin{thebibliography}{9}
+    \bibitem[Frank 04]{Kurs1} \emph{Erste Schritte mit \LaTeX},
+    Sascha Frank 2004
+    \bibitem[Frank 05]{kurz1} \emph{Kurzdokumentation zu Kurs 1}
+    Sascha Frank 2005 
+\end{thebibliography}
 
 \chapter{Verwendete Abkürzungen}
 
