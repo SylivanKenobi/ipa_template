@@ -47,6 +47,8 @@
 \lhead{\includegraphics[width=3cm]{puzzle_tagline_blau}}  
 \rfoot{Seite \thepage \hspace{1pt} von \pageref{LastPage}}
 \author{Sylvain}
+\title{IPA}
+\lfoot{\@author, \@title}
 
 \begin{document}
 \begin{titlepage}
@@ -161,7 +163,7 @@
 \newline
 \bigbreak
 \begin{flushleft}
-    \begin{tabular}{ |c|C{5cm}|c|c|c|c| }
+    \begin{tabular}{ |C{|C{5cm}|C|C|C|C| }
         \hline
         Risiko Nr & Massnahme &  W & S & Risiko & Handlungsweise \\
         \hline 
@@ -176,13 +178,24 @@
         \hline
     \end{tabular}
 \end{flushleft}
-
+Schadensausmaß: \\
+S1 = führt zu keiner Abwertung \\
+S2 = geringe Abwertung bis 1.0 Notenpunkte \\
+S3 = hohe Abwertung über 1,0 Notenpunkte \\
+S4 = führt zu Nichtbestehen \\
+\newline
+Eintrittswahrscheinlichkeit: \\
+W1 = unvorstellbar \\
+W2 = unwahrscheinlich \\
+W3 = eher vorstellbar \\
+W4 = vorstellbar \\
+W5= Eintreffen hoch \\
 \section{Risikomatrix}
 
 
 \begin{center}
-\renewcommand{\arraystretch}{2}
-\begin{tabularx}{200pt}{ |X|X|X|X|X| }
+\renewcommand{\arraystretch}{4}
+\begin{tabularx}{0.9\textwidth}{ |X|X|X|X|X| }
     \hline
     W5 & \cellcolor{yellow} & \cellcolor{red} &\cellcolor{red} & \cellcolor{red} \\
     \hline 
@@ -273,7 +286,8 @@
         \rowcolor{puzzleblue}\textbf{Gesamt} & \textbf{100\%} & & \textbf{0,75} & & \textbf{0.25} \\[12pt]
         \hline
     \end{tabular}
-\end{table}    
+\end{table}   
+LEGENDE 
 \section{Begründung}
 
 \chapter{Entwurf}
