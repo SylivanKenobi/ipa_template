@@ -14,6 +14,8 @@
 \usepackage{tikz}
 \usepackage{array}
 \usepackage{lipsum}
+\usepackage{multirow}
+\usepackage{float}
 
 \makeatletter
 \renewcommand\listoftables{%
@@ -28,7 +30,6 @@
         {\MakeUppercase\listfigurename}%
     \@starttoc{lof}%
 }
-
 \makeatother
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
@@ -51,53 +52,60 @@
 \begin{titlepage}
   \Huge IPA Sylvain Gilgen Puzzle ITC\normalsize
 \bigbreak
-  \begin{tabular}{|R{0.2\textwidth}|L{0.7\textwidth}|}
-    \hline
-    \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\textbf{IPA-Daten}} \\[12pt]
-    \hline
-    Firma & Puzzle ITC \\
-    \hline
-    \rowcolor{puzzleblue!30}Abteilung & BBT \\
-    \hline
-    Autor & Sylvain Gilgen \\
-    \hline
-    \rowcolor{puzzleblue!30}Ausgabedatum & dd.mm.yyyy \\
-    \hline
-    Projektvorgehen & Hermes \\
-    \hline
-    \rowcolor{puzzleblue!30}Version & 0.09 \\
-    \hline
-  \end{tabular}
-  \newline \bigbreak
-  \begin{table}
+\begin{table}[h!]
+    \begin{tabular}{|R{0.2\textwidth}|L{0.7\textwidth}|}
+        \hline
+        \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\textbf{IPA-Daten}} \\[12pt]
+        \hline
+        Firma & Puzzle ITC \\
+        \hline
+        \rowcolor{puzzleblue!30}Abteilung & BBT \\
+        \hline
+        Autor & Sylvain Gilgen \\
+        \hline
+        \rowcolor{puzzleblue!30}Ausgabedatum & dd.mm.yyyy \\
+        \hline
+        Projektvorgehen & Hermes \\
+        \hline
+        \rowcolor{puzzleblue!30}Version & 0.09 \\
+        \hline
+      \end{tabular}
+\end{table}
+\begin{table}[!h]
     \caption{startseite}
-  \begin{tabular}{|L{0.4\textwidth}|L{0.5\textwidth}|}
-    \hline
-    \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\textbf{Beteiligte Personen}} \\[12pt]
-    \hline
-    \textbf{In der Genehmigung} & \\
-    \hline
-    \rowcolor{puzzleblue!30}Valid Experte & Vorname Nachname \\
-    \hline
-    \textbf{In der Durchführung} & \\
-    \hline
-    \rowcolor{puzzleblue!30}Verantwortliche Fachkraft & Vorname Nachname, Rolle \\
-    \hline
-    Hauptexperte & Vorname Nachname \\
-    \hline
-    \rowcolor{puzzleblue!30}Zweit Experte & Vorname Nachname \\
-    \hline
-    \textbf{Zur Information, Kenntnis} & \\
-    \hline
-    \rowcolor{puzzleblue!30}Berufsblidner & Vorname Nachname, Rolle \\
-    \hline
-  \end{tabular}
+    \begin{tabular}{|L{0.4\textwidth}|L{0.5\textwidth}|}
+        \hline
+        \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\textbf{Beteiligte Personen}} \\[12pt]
+        \hline
+        \textbf{In der Genehmigung} & \\
+        \hline
+        \rowcolor{puzzleblue!30}Valid Experte & Vorname Nachname \\
+        \hline
+        \textbf{In der Durchführung} & \\
+        \hline
+        \rowcolor{puzzleblue!30}Verantwortliche Fachkraft & Vorname Nachname, Rolle \\
+        \hline
+        Hauptexperte & Vorname Nachname \\
+        \hline
+        \rowcolor{puzzleblue!30}Zweit Experte & Vorname Nachname \\
+        \hline
+        \textbf{Zur Information, Kenntnis} & \\
+        \hline
+        \rowcolor{puzzleblue!30}Berufsblidner & Vorname Nachname, Rolle \\
+        \hline
+    \end{tabular}
 \end{table}
 \end{titlepage}
 
+\part{Ablauf Organisation und Umfeld}
+\chapter{Kurzfassung des IPA-Berichtes}
+\section{Ausgangssituation}
+\section{Umsetzung}
+\section{Ergebnis}
+
 \tableofcontents
 
-\part{Ablauf Organisation und Umfeld}
+
 
 \chapter{Aufgabenstellung}
 \section{Titel der Arbeit}
@@ -107,25 +115,38 @@
 \section{Mittel und Methoden inklusive Projektmethode}
 \section{Vorkenntnisse}
 \section{Vorarbeiten}
-\section{Neue LerninhalteArbeiten in den letzten 6 Monaten}
+\section{Neue Lerninhalte}
+\section{Arbeiten in den letzten 6 Monaten}
 
 
 \chapter{Standards}
 
-\chapter{ISDS}
+\chapter{Schutzwertanalyse}
 %Dateisicherung nicht mehr verlangt
 
 \chapter{Organisation der IPA}
 \section{Datensicherung der IPA}
 \section{Änderungskontrolle, Prüfung, Genehmigung}
-
+\begin{table}[h!]
+    \caption{Änderungsprotokoll}
+    \begin{tabular}{|L{0.23\textwidth}|L{0.23\textwidth}|L{0.23\textwidth}|L{0.23\textwidth}|}
+        \hline
+        Version & Datum & Name & Beschreibung \\
+        \hline
+        Vorlage & 07.11.2019 & Sylvain Gilgen & Dokumentvorlage V1.0\\
+        \hline
+    \end{tabular}
+\end{table}
 \chapter{Detailliertes Projektvorgehen}
+\section{Projektvorgehen}
 \subsection{Projektmethode}
 \subsection{Szenario}
 \subsection{Phasen}
 \subsection{Module}
+\section{Projektorganisation}
+\subsection{Projektrollen}
 
-\section{Risikoanalyse}
+\chapter{Risikoanalyse}
 \begin{tabular}{ |c|c|c|c|c|c| }
     \hline
     Nr & Riskiobeschreibung & Auswirkung & W & S & Risiko \\
@@ -140,22 +161,22 @@
 \newline
 \bigbreak
 \begin{flushleft}
-\begin{tabular}{ |c|C{5cm}|c|c|c|c| }
-    \hline
-    Risiko Nr & Massnahme &  W & S & Risiko & Handlungsweise \\
-    \hline 
-    1 & Keine Risken eingehen bei Kälte, immer genug Kleidung tragen 
-    & W3 & S3 & \cellcolor{yellow}Mittel & Risikoakzeptanz \\
-    \hline
-    2 & Dateisicherungskonzept erstellen und dies strikt einhalten 
-    & W2 & S2 & \cellcolor{green}Niedrig & Risikoakzeptanz \\
-    \hline
-    3 & Sorge tragen und ein backup Gerät bereitstellen 
-    & W1 & S1 & \cellcolor{green}Niedrig & Risikoakzeptanz \\
-    \hline
-\end{tabular}
-    
+    \begin{tabular}{ |c|C{5cm}|c|c|c|c| }
+        \hline
+        Risiko Nr & Massnahme &  W & S & Risiko & Handlungsweise \\
+        \hline 
+        1 & Keine Risken eingehen bei Kälte, immer genug Kleidung tragen 
+        & W3 & S3 & \cellcolor{yellow}Mittel & Risikoakzeptanz \\
+        \hline
+        2 & Dateisicherungskonzept erstellen und dies strikt einhalten 
+        & W2 & S2 & \cellcolor{green}Niedrig & Risikoakzeptanz \\
+        \hline
+        3 & Sorge tragen und ein backup Gerät bereitstellen 
+        & W1 & S1 & \cellcolor{green}Niedrig & Risikoakzeptanz \\
+        \hline
+    \end{tabular}
 \end{flushleft}
+
 \section{Risikomatrix}
 
 
@@ -181,8 +202,12 @@
 
 \subsection{Kurze Stellungnahme zu den Risiken}
 
+\chapter{Zeitplan}
+\section{Zeitplan Tabelle}
+\section{Meilensteine}
+
 \chapter{Arbeitsjournal}
-\section{erster Tag 1.1.1029}
+\section{Tag 1 1.1.1029}
 \begin{tabular}{|L{0.4\textwidth}|C{60pt}|C{60pt}|C{60pt}|}
     \hline
     \rowcolor{puzzleblue!50}Tätigkeiten & Beteiligte Personen & Aufwand Geplant(Std) & Aufwand Effektiv \\
@@ -192,6 +217,17 @@
 \end{tabular}
 \subsection{Tagesablauf}
 \lipsum[1-3]
+\subsection{Hilfestellungen}
+\subsection{Reflexion}
+\subsubsection*{Was lief gut}
+
+\subsubsection*{Was lief weniger gut}
+
+\subsubsection*{Deine Erkenntnisse von heute}
+
+
+\subsection{Nächste Schritte}
+
 \chapter{Abschlussbericht}
 \section{Vergleich Ist/Soll}
 \section{Mittelbedarf}
@@ -205,7 +241,7 @@
 
 \part{Projektdokumentation}
 
-\chapter{Analyseteil (Initialisierung nach Hernes IPA)}
+\chapter{Initialisierung}
 \section{Studie; Ist-Zustand}
 \section{Persönliche Vorgehensziele}
 \section{Projektziele}
@@ -215,8 +251,30 @@
 \subsection{Nicht funktionale Anforderungen}
 \section{Variantenvorstellung}
 \subsection{Variante 1}
+\lipsum[1-3]
 \section{Variantenentscheid}
-\subsection{Begründung}
+\begin{table}[H]
+    \begin{tabular}{|L{0.2\textwidth}|L{0.13\textwidth}|L{0.13\textwidth}|L{0.13\textwidth}|L{0.13\textwidth}|L{0.13\textwidth}|}
+        \hline
+        \multirow{2}*{Kriterien} & \multirow{2}*{Gewicht} & \multicolumn{2}{|l|}{Lösung 1 } & \multicolumn{2}{|l|}{Lösung 2} \\
+        \cline{3-6}
+        & & Bewertung & Gesamt & Bewertung & Gesamt \\  
+        \hline
+        \rowcolor{puzzleblue!25}Erfüllung der Anforderungen & 25\% & 3 & 0,75 & 1 & 0,25 \\
+        \hline
+        Erfüllung der Anforderungen & 25\% & 3 & 0,75 & 1 & 0,25 \\
+        \hline
+        \rowcolor{puzzleblue!25}Erfüllung der Anforderungen & 25\% & 3 & 0,75 & 1 & 0,25 \\
+        \hline
+        Erfüllung der Anforderungen & 25\% & 3 & 0,75 & 1 & 0,25 \\
+        \hline
+        \rowcolor{puzzleblue!25}Erfüllung der Anforderungen & 25\% & 3 & 0,75 & 1 & 0,25 \\
+        \hline
+        \rowcolor{puzzleblue}\textbf{Gesamt} & \textbf{100\%} & & \textbf{0,75} & & \textbf{0.25} \\[12pt]
+        \hline
+    \end{tabular}
+\end{table}    
+\section{Begründung}
 
 \chapter{Entwurf}
 \section{Konzept entwickeln}
@@ -265,10 +323,24 @@
     \bibitem[Frank 05]{kurz1} \emph{Kurzdokumentation zu Kurs 1}
     Sascha Frank 2005 
 \end{thebibliography}
+\addcontentsline{toc}{section}{Literaturverzeichnis}
 
 \chapter{Verwendete Abkürzungen}
+\begin{table}[h!]
+    \begin{tabular}{|L{0.3\textwidth}|L{0.6\textwidth}|}
+        \hline
+        \rowcolor{puzzleblue!40} Abkürzung & Bedeutung \\
+        \hline
+    \end{tabular}
+\end{table}
 
 \chapter{Glossar}
-
+\begin{table}[h!]
+    \begin{tabular}{|L{0.3\textwidth}|L{0.6\textwidth}|}
+        \hline
+        \rowcolor{puzzleblue!40} Begriff & Bedeutung \\[12pt]
+        \hline
+    \end{tabular}
+\end{table}
 \chapter{Anhänge}
 \end{document}
