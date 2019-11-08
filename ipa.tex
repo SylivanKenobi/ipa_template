@@ -16,7 +16,12 @@
 \usepackage{lipsum}
 \usepackage{multirow}
 \usepackage{float}
+\usepackage{caption}
 
+%Tabellen Caption links orientiert
+\captionsetup[table]{skip=0pt,singlelinecheck=off}
+
+%Tabellen- & Abbildungsverzeichnis als Section und in Inhaltsverzeichnis 
 \makeatletter
 \renewcommand\listoftables{%
     \section{\listtablename}%
@@ -31,24 +36,38 @@
     \@starttoc{lof}%
 }
 \makeatother
+
+%Weitere Spalten typen
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
-\definecolor{puzzleblue}{RGB}{30,90,150}
+%Seitenformatierung anpassen
 \textwidth=400pt
 \oddsidemargin=47pt
-\allsectionsfont{\sffamily}
 \fancypagestyle{plain}{}
 \pagestyle{fancy}
+
+%Sans seriff Font
+\allsectionsfont{\sffamily}
+
+%Header höhe anpassen
 \setlength\headheight{33pt}
+%Bilderpfad
 \graphicspath{{bilder/}}
-\fancyhf{} 
-\lhead{\includegraphics[width=3cm]{puzzle_tagline_blau}}  
+%Header und Footer
+\fancyhf{}
+\cfoot{\today}
 \rfoot{Seite \thepage \hspace{1pt} von \pageref{LastPage}}
+\lfoot{Version 0.0.1}
+\chead{Titel der IPA}
+\lhead{\includegraphics[width=3cm]{puzzle_tagline_blau}}  
+\rhead{Sylvain Gilgen}
+
+%Weiteres
+\definecolor{puzzleblue}{RGB}{30,90,150}
 \author{Sylvain}
 \title{IPA}
-\lfoot{Sylvain Gilgen}
 
 \begin{document}
 \begin{titlepage}
@@ -72,9 +91,9 @@
         \rowcolor{puzzleblue!30}Version & 0.09 \\
         \hline
       \end{tabular}
+      \caption{IPA Daten}
 \end{table}
 \begin{table}[!h]
-    \caption{startseite}
     \begin{tabular}{|L{0.4\textwidth}|L{0.5\textwidth}|}
         \hline
         \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\textbf{Beteiligte Personen}} \\[12pt]
@@ -96,7 +115,9 @@
         \rowcolor{puzzleblue!30}Berufsblidner & Vorname Nachname, Rolle \\
         \hline
     \end{tabular}
+    \caption{Beteiligte Personen}
 \end{table}
+\Huge IPA 2020 Kanton Bern
 \end{titlepage}
 
 \part{Ablauf Organisation und Umfeld}
@@ -130,14 +151,18 @@
 \section{Datensicherung der IPA}
 \section{Änderungskontrolle, Prüfung, Genehmigung}
 \begin{table}[h!]
-    \caption{Änderungsprotokoll}
-    \begin{tabular}{|L{0.23\textwidth}|L{0.23\textwidth}|L{0.23\textwidth}|L{0.23\textwidth}|}
+    \begin{tabular}{|L{0.1\textwidth}|L{0.23\textwidth}|L{0.23\textwidth}|L{0.33\textwidth}|}
         \hline
-        Version & Datum & Name & Beschreibung \\
+        \rowcolor{puzzleblue}Version & Datum & Name & Beschreibung \\[11pt]
+        \hline
+        Vorlage & 07.11.2019 & Sylvain Gilgen & Dokumentvorlage V1.0\\
+        \hline
+        Vorlage & 07.11.2019 & Sylvain Gilgen & Dokumentvorlage V1.0\\
         \hline
         Vorlage & 07.11.2019 & Sylvain Gilgen & Dokumentvorlage V1.0\\
         \hline
     \end{tabular}
+    \caption{Änderungsprotokoll}
 \end{table}
 \chapter{Detailliertes Projektvorgehen}
 \section{Projektvorgehen}
@@ -149,20 +174,23 @@
 \subsection{Projektrollen}
 
 \chapter{Risikoanalyse}
-\begin{tabular}{ |C{0.1\textwidth}|C{0.2\textwidth}|C{0.2\textwidth}|C{0.1\textwidth}|C{0.1\textwidth}|C{0.2\textwidth}| }
-    \hline
-    Nr & Riskiobeschreibung & Auswirkung & W & S & Risiko \\
-    \hline 
-    1 & Krankheit & Weniger Arbeitstage & 3 & 2-4 & \cellcolor{red}Hoch \\
-    \hline
-    2 & Datenverslust &Datenverlus und Zeitverzug & W2 & S4 & \cellcolor{red}Hoch \\
-    \hline
-    3 & Ausfall des Laptops & Zeistverzug & W3 & S2 & \cellcolor{yellow}Niedrig \\
-    \hline
-\end{tabular}
-\newline
+\begin{table}[H]
+    \begin{tabular}{ |C{0.1\textwidth}|C{0.2\textwidth}|C{0.2\textwidth}|C{0.1\textwidth}|C{0.1\textwidth}|C{0.1\textwidth}|C{0.2\textwidth}| }
+        \hline
+        Nr & Riskiobeschreibung & Auswirkung & W & S & Risiko & Handlungsweise \\
+        \hline 
+        1 & Krankheit & Weniger Arbeitstage & 3 & 2-4 & \cellcolor{red}Hoch &\\
+        \hline
+        2 & Datenverslust &Datenverlus und Zeitverzug & W2 & S4 & \cellcolor{red}Hoch &\\
+        \hline
+        3 & Ausfall des Laptops & Zeistverzug & W3 & S2 & \cellcolor{yellow}Niedrig &\\
+        \hline
+    \end{tabular}
+    \caption{Risikoanalyse}
+\end{table}
+
 \bigbreak
-\begin{flushleft}
+\begin{table}[H]
     \begin{tabular}{ |C{0.1\textwidth}|C{0.3\textwidth}|C{0.1\textwidth}|C{0.1\textwidth}|C{0.1\textwidth}|C{0.2\textwidth}| }
         \hline
         Risiko Nr & Massnahme &  W & S & Risiko & Handlungsweise \\
@@ -177,7 +205,8 @@
         & W1 & S1 & \cellcolor{green}Niedrig & Risikoakzeptanz \\
         \hline
     \end{tabular}
-\end{flushleft}
+    \caption{Massnahmen}
+\end{table}
 Schadensausmaß: \\
 S1 = führt zu keiner Abwertung \\
 S2 = geringe Abwertung bis 1.0 Notenpunkte \\
@@ -190,28 +219,43 @@ W2 = unwahrscheinlich \\
 W3 = eher vorstellbar \\
 W4 = vorstellbar \\
 W5= Eintreffen hoch \\
+
 \section{Risikomatrix}
 
 
-\begin{center}
-\renewcommand{\arraystretch}{4}
-\begin{tabularx}{0.9\textwidth}{ |X|X|X|X|X| }
-    \hline
-    W5 & \cellcolor{yellow} & \cellcolor{red} &\cellcolor{red} & \cellcolor{red} \\
-    \hline 
-    W4 & \cellcolor{yellow} & \cellcolor{yellow} & \cellcolor{red} & \cellcolor{red}  \\
-    \hline
-    W3 & \cellcolor{green} & \cellcolor{yellow} \tikz\draw[black,fill=red] circle [radius=0.2] node {1};  & \cellcolor{yellow} & \cellcolor{red} \\
-    \hline 
-    W2 & \cellcolor{green} & \cellcolor{green} & \cellcolor{yellow} & \cellcolor{yellow} \\
-    \hline
-    W1 & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} \\
-    \hline
-     & S1 & S2 & S3 & S4 \\
-    \hline
-\end{tabularx}
-\renewcommand{\arraystretch}{1}
-\end{center}
+\begin{table}[H]
+    \renewcommand{\arraystretch}{4}
+    \begin{tabular}{*{6}{|L{0.16\textwidth}}}
+        \hline
+        W5 & \cellcolor{yellow} & \cellcolor{red} &\cellcolor{red} & \cellcolor{red} \\
+        \hline 
+        W4 & \cellcolor{yellow} & \cellcolor{yellow} & \cellcolor{red} & \cellcolor{red}  \\
+        \hline
+        W3 & \cellcolor{green} \tikz\draw[black,fill=gray] circle [radius=0.2] node {1}; & \cellcolor{yellow} \tikz\draw[black,fill=white] circle [radius=0.2] node {1};  & \cellcolor{yellow} & \cellcolor{red} \\
+        \hline 
+        W2 & \cellcolor{green} & \cellcolor{green} & \cellcolor{yellow} & \cellcolor{yellow} \\
+        \hline
+        W1 & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} \\
+        \hline
+        & S1 & S2 & S3 & S4 \\
+        \hline
+    \end{tabular}
+    \renewcommand{\arraystretch}{1}
+    \caption{Risikomatrix}
+\end{table}
+
+\begin{table}[H]
+    \begin{tabular}{|L{0.2\textwidth}|L{0.7\textwidth}|}
+        \hline
+        \multicolumn{2}{|l|}{Legende} \\
+        \hline
+        \tikz\draw[black,fill=white] circle [radius=0.2] node {1}; & Risiko ohne Massnahme \\
+        \hline
+        \tikz\draw[black,fill=gray] circle [radius=0.2] node {1}; & Risiko nach Massnahme \\
+        \hline
+    \end{tabular}
+    \caption{Riskiomatrix Legende}
+\end{table}
 
 \subsection{Kurze Stellungnahme zu den Risiken}
 
@@ -221,13 +265,16 @@ W5= Eintreffen hoch \\
 
 \chapter{Arbeitsjournal}
 \section{Tag 1 1.1.1029}
-\begin{tabular}{|L{0.4\textwidth}|C{60pt}|C{60pt}|C{60pt}|}
-    \hline
-    \rowcolor{puzzleblue!50}Tätigkeiten & Beteiligte Personen & Aufwand Geplant(Std) & Aufwand Effektiv \\
-    \hline
-    arbeit 1 & 1 & 1 & 1 \\
-    \hline
-\end{tabular}
+\begin{table}[H]
+    \begin{tabular}{|L{0.4\textwidth}|C{60pt}|C{60pt}|C{60pt}|}
+        \hline
+        \rowcolor{puzzleblue!50}Tätigkeiten & Beteiligte Personen & Aufwand Geplant(Std) & Aufwand Effektiv \\
+        \hline
+        arbeit 1 & 1 & 1 & 1 \\
+        \hline
+    \end{tabular}
+    \caption{Tätigkeiten}
+\end{table}
 \subsection{Tagesablauf}
 \lipsum[1-3]
 \subsection{Hilfestellungen}
@@ -286,6 +333,7 @@ W5= Eintreffen hoch \\
         \rowcolor{puzzleblue}\textbf{Gesamt} & \textbf{100\%} & & \textbf{0,75} & & \textbf{0.25} \\[12pt]
         \hline
     \end{tabular}
+    \caption{Variantenentscheid}
 \end{table}   
 LEGENDE 
 \section{Begründung}
@@ -302,27 +350,30 @@ LEGENDE
 \subsection{White-Box Tests}
 \subsection{Testpersonen}
 \subsection{Testverfahren 1}
-\begin{tabular}{|l|l|}
-    \hline
-    \rowcolor{puzzleblue} \multicolumn{2}{|l|}{Testfall Nr. 1}  \\[10pt]
-    \hline
-    \textbf{Spezfikation} & \textbf{Beschreibung} \\
-    \hline
-    \rowcolor{puzzleblue!25}\textbf{Testname} & Rspec \\
-    \hline
-    \textbf{Testart} & Automatisiert \\
-    \hline
-    \rowcolor{puzzleblue!25}\textbf{Voraussetzungen} & Keine \\
-    \hline
-    \textbf{Vorbereitung} & Datenbank mit Testdaten starten \\
-    \hline
-    \rowcolor{puzzleblue!25}\textbf{Ablauf} & 1. Im Terminal rake spec eingeben \\
-    \hline
-    \textbf{Erwartetes Resultata} & Keine Fehler \\
-    \hline
-    \rowcolor{puzzleblue!25}\textbf{Erreichtes Resultat} & Keine Fehler \\
-    \hline
-\end{tabular}
+\begin{table}[H]
+    \begin{tabular}{|l|l|}
+        \hline
+        \rowcolor{puzzleblue} \multicolumn{2}{|l|}{Testfall Nr. 1}  \\[10pt]
+        \hline
+        \textbf{Spezfikation} & \textbf{Beschreibung} \\
+        \hline
+        \rowcolor{puzzleblue!25}\textbf{Testname} & Rspec \\
+        \hline
+        \textbf{Testart} & Automatisiert \\
+        \hline
+        \rowcolor{puzzleblue!25}\textbf{Voraussetzungen} & Keine \\
+        \hline
+        \textbf{Vorbereitung} & Datenbank mit Testdaten starten \\
+        \hline
+        \rowcolor{puzzleblue!25}\textbf{Ablauf} & 1. Im Terminal rake spec eingeben \\
+        \hline
+        \textbf{Erwartetes Resultata} & Keine Fehler \\
+        \hline
+        \rowcolor{puzzleblue!25}\textbf{Erreichtes Resultat} & Keine Fehler \\
+        \hline
+    \end{tabular}
+    \caption{Testfall 1}
+\end{table}
 \chapter{Umsetzung}
 \section{System erstellen}
 
