@@ -1,0 +1,51 @@
+\newpage
+\storeareas\riskvalues
+\KOMAoptions{paper=a3, paper=landscape, DIV=current}
+\areaset
+  {\dimexpr\the\paperwidth-1cm\relax}% calculate requiered \textwidth
+  {\dimexpr\the\paperheight-5.5cm\relax}% calculate requiered \textheight
+\recalctypearea
+
+\chapter{Risikoanalyse}
+\begin{table}[H]
+    \begin{tabular}{ |C{0.01\textwidth}|C{0.1\textwidth}|C{0.1\textwidth}|C{0.02\textwidth}|C{0.02\textwidth}|C{0.03\textwidth}|C{0.1\textwidth}|C{0.2\textwidth}|C{0.02\textwidth}|C{0.02\textwidth}|C{0.03\textwidth}|C{0.1\textwidth}| }
+        \hline
+        \multirow{2}*{Nr} & \multirow{2}*{Riskiobeschreibung} & \multirow{2}*{Auswirkung} & \multicolumn{4}{|l|}{Vor Massnahme}& \multirow{2}*{Massnahmen} & \multicolumn{4}{|l|}{Nach Massnahme} \\
+        \cline{4-7} \cline{9-12}&&& W & S & Risiko & Handlungsweise &&  W & S & Risiko & Handlungsweise \\
+        \hline 
+        1 & Krankheit & Weniger Arbeitstage & W5 & S4 & \cellcolor{red}Hoch & Risikominderung &       
+        \begin{itemize}[noitemsep,topsep=0pt]
+        \item Die Empfehlungen vom BAG beachten
+          \item Die Arbeit im Homeoffice erledigen
+          \item Ansammlungen von Leuten vermeiden
+          \item Experten sofort informieren
+        \end{itemize} & W5 & S1 & \cellcolor{yellow}Mittel & Risikoakzeptanz \\
+        \hline
+        2 & Datenverslust & Relevante Daten der Arbeit gehen verloren. & W1 & S3 & \cellcolor{green}Niedrig &Risikominderung 
+        & Dateisicherungskonzept erstellen und dies strikt einhalten & W1 & S1 & \cellcolor{green}Niedrig & Risikoakzeptanz \\
+        \hline
+        3 & Ausfall des Laptops & Zeistverzug & W3 & S2 & \cellcolor{yellow}Mittel & Risikominderung 
+        & Sorge tragen und ein backup Gerät bereitstellen & W2 & S2 & \cellcolor{green}Niedrig & Risikoakzeptanz\\
+        \hline
+        4 & Abbruch wegen Pandemie & Verschiebung der IPA & W2 & S4 & \cellcolor{yellow}Mittel & Risikoakzeptanz  & Aufgrund der Skala des Risikos kann ich als Teilnehmer nichts dagegen machen. Risikoakzeptanz & W2 & S4 & \cellcolor{yellow}Mittel & Risikoakzeptanz\\
+        \hline
+    \end{tabular}
+    \caption{Risikoanalyse}
+\end{table}
+
+Schadensausmass: \\
+S1 = führt zu keiner Abwertung \\
+S2 = geringe Abwertung bis 1.0 Notenpunkte \\
+S3 = hohe Abwertung über 1,0 Notenpunkte \\
+S4 = führt zu Nichtbestehen \\
+\newline
+Eintrittswahrscheinlichkeit: \\
+W1 = unvorstellbar \\
+W2 = unwahrscheinlich \\
+W3 = eher vorstellbar \\
+W4 = vorstellbar \\
+W5= Eintreffen hoch \\
+
+\restoregeometry
+\riskvalues
+\newpage

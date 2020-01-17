@@ -1,15 +1,15 @@
 IPA Infoabend 2019-10-21.pdf
 Dokumentenvorgabe-IPA-2020_09.docx
 Expertencheckliste_2019.docx
-ipa.aux
-ipa.fdb_latexmk
-ipa.fls
-ipa.log
-ipa.pdf
-ipa.synctex.gz
-ipa.toc
-Vorlage IPA 2019_wiss.dotx
-ipa.lof
-ipa.lot
-ipa.tof
 *.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.synctex.gz
+*.toc
+Vorlage IPA 2019_wiss.dotx
+*.lof
+*.lot
+*.tof
+*.aux
+*.out

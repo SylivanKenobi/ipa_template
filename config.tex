@@ -2,9 +2,14 @@
 \usepackage{lmodern}
 \usepackage{amsmath}
 \usepackage[ngerman]{babel}
+\usepackage{enumitem}% http://ctan.org/pkg/enumitem
 \usepackage[ngerman]{translator} % Weitere Übersetzungen
 \usepackage{graphicx}
+\usepackage{layout}
+\usepackage{listings}
 \usepackage{fancyhdr}
+\usepackage{makecell}
+\usepackage{titlesec}
 \usepackage{roboto}
 \usepackage{sectsty}
 \usepackage{lastpage}
@@ -19,13 +24,17 @@
 \usepackage{hyperref}
 \usepackage{geometry}            % Dient zur Interface dimensionierung
 \usepackage{pdflscape}           % bessere Lesbarkeit des PDF Dokuments
-
+\usepackage{typearea}  % loaded automatically if using KOMA-Script class
 \usepackage{pgfgantt}
+
+\lstset{language=ruby}
 
 \hypersetup{%
     colorlinks=false,% hyperlinks will be black
     pdfborderstyle={/S/U/W 0}% border style will be underline of width 1pt
 }
+
+\titleformat{\chapter}{\Huge\bfseries\sffamily}{\thechapter}{1em}{\Huge}
 
 %Tabellen Caption links orientiert
 \captionsetup[table]{skip=0pt,singlelinecheck=off}
@@ -53,9 +62,12 @@
 
 %Seitenformatierung anpassen
 \textwidth=400pt
-\oddsidemargin=47pt
+\textheight=650pt
+\oddsidemargin=25pt
+\footskip=20pt
 \fancypagestyle{plain}{}
 \pagestyle{fancy}
+\voffset=0pt
 
 %Sans seriff Font
 \allsectionsfont{\sffamily}
