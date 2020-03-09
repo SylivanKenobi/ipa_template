@@ -1,0 +1,43 @@
+\newpage
+\storeareas\riskvalues
+\KOMAoptions{paper=a3, paper=landscape, DIV=current}
+\areaset
+  {\dimexpr\the\paperwidth-2cm\relax}% calculate requiered \textwidth
+  {\dimexpr\the\paperheight-5.5cm\relax}% calculate requiered \textheight
+\recalctypearea
+
+\chapter{Risikoanalyse}
+\begin{table}[H]
+    \begin{tabular}{ |C{0.01\textwidth}|C{0.1\textwidth}|C{0.1\textwidth}|C{0.02\textwidth}|C{0.02\textwidth}|C{0.1\textwidth}|C{0.1\textwidth}|C{0.05\textwidth}|C{0.05\textwidth}|C{0.1\textwidth}|C{0.1\textwidth}|C{0.1\textwidth}|C{0.2\textwidth}| }
+        \hline
+        Nr & Riskiobeschreibung & Auswirkung & W & S & Risiko & Handlungsweise & Massnahme &  W & S & Risiko & Handlungsweise \\
+        \hline 
+        1 & Krankheit & Weniger Arbeitstage & W3 & S2-4 & \cellcolor{red}Hoch & Keine Risken eingehen bei Kälte, immer genug Kleidung tragen 
+        & W3 & S3 & \cellcolor{yellow}Mittel & Risikoakzeptanz &\\
+        \hline
+        2 & Datenverslust &Datenverlus und Zeitverzug & W2 & S4 & \cellcolor{red}Hoch &Dateisicherungskonzept erstellen und dies strikt einhalten 
+        & W2 & S2 & \cellcolor{green}Niedrig & Risikoakzeptanz &\\
+        \hline
+        3 & Ausfall des Laptops & Zeistverzug & W3 & S2 & \cellcolor{yellow}Niedrig &Sorge tragen und ein backup Gerät bereitstellen 
+        & W1 & S1 & \cellcolor{green}Niedrig & Risikoakzeptanz &\\
+        \hline
+    \end{tabular}
+    \caption{Risikoanalyse}
+\end{table}
+
+Schadensausmaß: \\
+S1 = führt zu keiner Abwertung \\
+S2 = geringe Abwertung bis 1.0 Notenpunkte \\
+S3 = hohe Abwertung über 1,0 Notenpunkte \\
+S4 = führt zu Nichtbestehen \\
+\newline
+Eintrittswahrscheinlichkeit: \\
+W1 = unvorstellbar \\
+W2 = unwahrscheinlich \\
+W3 = eher vorstellbar \\
+W4 = vorstellbar \\
+W5= Eintreffen hoch \\
+
+\restoregeometry
+\riskvalues
+\newpage

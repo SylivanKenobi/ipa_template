@@ -1,9 +1,15 @@
+\newpage
+\storeareas\timevalues
+\KOMAoptions{paper=a3, paper=landscape, DIV=current}
+\areaset
+  {\dimexpr\the\paperwidth-2cm\relax}% calculate requiered \textwidth
+  {\dimexpr\the\paperheight-5.5cm\relax}% calculate requiered \textheight
+\recalctypearea
+
+
 \newcommand{\soll}[3]{\ganttbar{#1}{#2}{#3}}
 \newcommand{\ist}[2]{\ganttbar[bar top shift=-0.01,bar/.append style={bottom color=puzzleblue}]{}{#1}{#2}}
-\storeareas\myvalues
-\newpage
-\KOMAoptions{paper=a3, paper=landscape}
-\recalctypearea
+
 \begin{ganttchart}[
         title height=1,
         y unit title=9mm,
@@ -103,5 +109,6 @@ M4: Projekt abgeschlossen
 
 }
 
-\myvalues
+\restoregeometry
+\timevalues
 \newpage
