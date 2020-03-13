@@ -8,7 +8,7 @@
 
 
 \newcommand{\soll}[3]{\ganttbar{#1}{#2}{#3}}
-\newcommand{\ist}[2]{\ganttbar[bar top shift=-0.01,bar/.append style={bottom color=puzzleblue}]{}{#1}{#2}}
+\newcommand{\ist}[2]{\ganttbar[bar top shift=-0.01,bar/.append style={bottom color=puzzleblue, top color=puzzleblue!50}]{}{#1}{#2}}
 
 \begin{ganttchart}[
         title height=1,
@@ -97,16 +97,16 @@
 \end{ganttchart}
 
 {\addtolength{\leftskip}{5.1cm}
-\textbf{Legende}\\
-Grau: soll \\
-Blau: ist
-
-\textbf{Meilensteine}\\
-M1: Initialisierung abgeschlossen\\
-M2: Konzeptphase abgeschlossen\\
-M3: Realisierung abgeschlossen\\
-M4: Projekt abgeschlossen
-
+\begin{table}[!h]
+      \begin{tabular}{L{0.05\textwidth}L{0.08\textwidth}L{0.05\textwidth}L{0.2\textwidth}}
+          \textbf{Legende} &&\multicolumn{2}{l}{\textbf{Meilenstene}} \\
+          Grau:& soll & M1:& Initialisierung abgeschlossen\\
+          Blau: & ist &M2:& Konzeptphase abgeschlossen\\
+          &&M3:& Realisierung abgeschlossen\\
+          &&M4:& Projekt abgeschlossen
+      \end{tabular}
+      \caption{Legende und Meilensteine vom Zeitplan}
+  \end{table}
 }
 
 \restoregeometry
