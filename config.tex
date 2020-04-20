@@ -87,5 +87,28 @@
 
 %Weiteres
 \definecolor{puzzleblue}{RGB}{30,90,150}
+\definecolor{burntorange}{rgb}{1, 0.33, 0.0}
+\definecolor{darkmagenta}{rgb}{0.55, 0.0, 0.55}
+\definecolor{electricpurple}{rgb}{0.75, 0.0, 1.0}
+\definecolor{feldgrau}{HTML}{009900}
+\definecolor{ferngreen}{HTML}{99cc99}
+\definecolor{bostonuniversityred}{rgb}{0.8, 0.0, 0.0}
+\definecolor{darkblue}{rgb}{0.0, 0.0, 0.55}
 \author{Sylvain}
 \title{IPA}
+
+% Gantt
+\newcommand{\sollD}[3]{\ganttbar[bar/.append style={bottom color=darkblue, top color=darkblue!50}]{#1}{#2}{#3}}
+\newcommand{\istD}[2]{\ganttbar[bar top shift=-0.01,bar/.append style={bottom color=puzzleblue, top color=puzzleblue!50}]{}{#1}{#2}}
+
+\newcommand{\sollI}[3]{\ganttbar[bar/.append style={bottom color=bostonuniversityred, top color=bostonuniversityred!50}]{#1}{#2}{#3}}
+\newcommand{\istI}[2]{\ganttbar[bar top shift=-0.01,bar/.append style={bottom color=red!80, top color=red!30}]{}{#1}{#2}}
+
+\newcommand{\sollK}[3]{\ganttbar[bar/.append style={bottom color=feldgrau, top color=feldgrau!50}]{#1}{#2}{#3}}
+\newcommand{\istK}[2]{\ganttbar[bar top shift=-0.01,bar/.append style={bottom color=ferngreen, top color=ferngreen!50}]{}{#1}{#2}}
+
+\newcommand{\sollR}[3]{\ganttbar[bar/.append style={bottom color=darkmagenta, top color=darkmagenta!50}]{#1}{#2}{#3}}
+\newcommand{\istR}[2]{\ganttbar[bar top shift=-0.01,bar/.append style={bottom color=electricpurple, top color=electricpurple!50}]{}{#1}{#2}}
+
+\newcommand{\sollE}[3]{\ganttbar[bar/.append style={bottom color=burntorange, top color=burntorange!50}]{#1}{#2}{#3}}
+\newcommand{\istE}[2]{\ganttbar[bar top shift=-0.01,bar/.append style={bottom color=orange, top color=orange!50}]{}{#1}{#2}}

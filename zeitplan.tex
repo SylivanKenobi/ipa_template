@@ -2,33 +2,27 @@
 \storeareas\timevalues
 \KOMAoptions{paper=a3, paper=landscape, DIV=current}
 \areaset
-{\dimexpr\the\paperwidth-2cm\relax}% calculate requiered \textwidth
+{\dimexpr\the\paperwidth-1cm\relax}% calculate requiered \textwidth
 {\dimexpr\the\paperheight-5.5cm\relax}% calculate requiered \textheight
 \recalctypearea
 
-
-\newcommand{\soll}[3]{\ganttbar{#1}{#2}{#3}}
-\newcommand{\ist}[2]{\ganttbar[bar top shift=-0.01,bar/.append style={bottom color=puzzleblue, top color=puzzleblue!50}]{}{#1}{#2}}
 \begin{table}
-
     \begin{ganttchart}[
             title height=1,
             y unit title=9mm,
-            y unit chart=4.2mm,
+            y unit chart=4mm,
             x unit=4.4mm,
             hgrid={dotted, draw=none},
             vgrid={draw=none, dotted, draw=none, black},
             % BAR
             bar label node/.append style={yshift=-1.3mm},
-            bar height=.7,
-            bar top shift=.3,
-            bar/.append style={top color=lightgray!50, bottom color=gray},
+            bar height=.8,
+            bar top shift=.2,
+            bar label node/.style={text width=4cm,align=right,anchor=east},
             % MILESTONE
-            milestone/.append style={top color=red!50, bottom color=red},
-            milestone height=0.4mm,
-            milestone inline label node/.style={below=2mm, font=\scriptsize},
-            milestone top shift=-0.15mm,
-            %bar label node/.style={text width=4cm,align=right,anchor=east},
+            milestone/.append style={top color=red, bottom color=red},
+            milestone height=0.5mm,
+            milestone top shift=-0.25mm,
         ]{1}{80}
         \pgfcalendar{titlecal}{2020-04-17}{2020-04-30}{
             % Exclude weekends and mondays
@@ -47,75 +41,94 @@
         \gantttitle{Abschluss}{10} \\
         \gantttitlelist{1,...,40}{2}\\
         %%%%%% Allgemeines
-        \soll{Dokumentation / Journal}{8}{8}
-        \soll{}{16}{16}
-        \soll{}{24}{24}
-        \soll{}{32}{32}
-        \soll{}{40}{40}
-        \soll{}{48}{48}
-        \soll{}{56}{56}
-        \soll{}{64}{64}
-        \soll{}{72}{72}
-        \soll{}{80}{80}\\
-        \ist{8}{8}
-        \ist{16}{16}
-        \ist{24}{24}
-        \ist{32}{32}
-        \ist{40}{40}
-        \ist{48}{48}
-        \ist{56}{56}
-        \ist{64}{64}
-        \ist{72}{72}
-        \ist{80}{80} \\
-        \soll{Expertenbesuch}{26}{26}
-        \soll{}{39}{39}\\
-        \ist{26}{26}
-        \ist{39}{39}\\
+        \sollD{Dokumentation}{8}{8}
+        \sollD{}{16}{16}
+        \sollD{}{24}{24}
+        \sollD{}{32}{32}
+        \sollD{}{40}{40}
+        \sollD{}{48}{48}
+        \sollD{}{56}{56}
+        \sollD{}{64}{64}
+        \sollD{}{72}{72}
+        \sollD{}{80}{80}\\
+        \istD{8}{8}
+        \istD{16}{16}
+        \istD{24}{24}
+        \istD{32}{32}
+        \istD{40}{40}
+        \istD{48}{48}
+        \istD{56}{56}
+        \istD{64}{64}
+        \istD{72}{72}
+        \istD{80}{80} \\
+        \sollD{Expertenbesuch}{26}{26}
+        \sollD{}{39}{39}\\
+        \istD{26}{26}
+        \istD{39}{39}\\
+        \sollD{Daily mit FV}{8}{8}
+        \sollD{}{16}{16}
+        \sollD{}{24}{24}
+        \sollD{}{32}{32}
+        \sollD{}{40}{40}
+        \sollD{}{48}{48}
+        \sollD{}{56}{56}
+        \sollD{}{64}{64}
+        \sollD{}{72}{72}
+        \sollD{}{80}{80}\\
+        \istD{8}{8}
+        \istD{16}{16}
+        \istD{24}{24}
+        \istD{32}{32}
+        \istD{40}{40}
+        \istD{48}{48}
+        \istD{56}{56}
+        \istD{64}{64}
+        \istD{72}{72}
+        \istD{80}{80} \\
         %%%%%% DAY ONE 1-8
-        \soll{Zeitplan}{1}{2} \\
-        \ist{1}{2}\\
-        \soll{Aufgabenstellung}{3}{3} \\
-        \ist{3}{3}\\
-        \soll{Organisation IPA}{4}{4} \\
-        \ist{4}{4}\\
-        \soll{Firmenstandarts}{5}{5} \\
-        \ist{5}{5}\\
-        \soll{Ist Zustand}{6}{8} \\
-        \ist{6}{9}\\
-        \soll{Risikoanalyse}{9}{10} \\
-        \ist{10}{11}\\
-        \soll{Einführung}{11}{11} \\
-        \ist{12}{12} \\
-        \soll{Analyse}{12}{14} \\
-        \ist{13}{16} \\
-        \soll{Variantenetnscheid}{15}{16} \\
-        \ist{17}{18} 
+        \sollI{Zeitplan}{1}{2} \\
+        \istI{1}{2}\\
+        \sollI{Aufgabenstellung}{3}{3} \\
+        \istI{3}{3}\\
+        \sollI{Organisation IPA}{4}{4} \\
+        \istI{4}{4}\\
+        \sollI{Firmenstandarts}{5}{5} \\
+        \istI{5}{5}\\
+        \sollI{Ist Zustand}{6}{8} \\
+        \istI{6}{9}\\
+        \sollI{Risikoanalyse}{9}{10} \\
+        \istI{10}{11}\\
+        \sollI{Einführung}{11}{11} \\
+        \istI{12}{12} \\
+        \sollI{Analyse}{12}{14} \\
+        \istI{13}{16} \\
+        \sollI{Variantenetnscheid}{15}{16} \\
+        \istI{17}{18} 
         \ganttmilestone[inline]{M1}{16}\\
         %%%%%% DAY TWO 9-16
-        \soll{Aufgabe 1}{17}{20}\\
-        \ist{19}{22} \\
-        \soll{Aufgabe 2}{21}{24}\\
-        \ist{21}{24}\\
-        \\
-        \soll{Aufgabe 3}{25}{28}\\
-        \ist{25}{27} \\
-        \soll{Aufgabe 4}{29}{31}\\
-        \ist{28}{30} \\
-        \soll{Aufgabe 5}{29}{32}\\
-        \ist{31}{32} 
+        \sollK{Aufgabe 1}{17}{20}\\
+        \istK{19}{22} \\
+        \sollK{Aufgabe 2}{21}{24}\\
+        \istK{21}{24}\\
+        \sollK{Aufgabe 3}{25}{28}\\
+        \istK{25}{27} \\
+        \sollK{Aufgabe 4}{29}{31}\\
+        \istK{28}{30} \\
+        \sollK{Aufgabe 5}{29}{32}\\
+        \istK{31}{32} 
         \ganttmilestone[inline]{M2}{32} \\
         %%%%%% DAY THREE 17-24
-        \soll{Aufgabe 6}{33}{38}\\
-        \ist{33}{38} 
+        \sollR{Aufgabe 6}{33}{38}\\
+        \istR{33}{38} 
         \ganttmilestone[inline]{M3}{38} \\
-        \soll{Aufgabe 7}{39}{40}\\
-        \ist{39}{40} 
+        \sollR{Aufgabe 7}{39}{40}\\
+        \istR{39}{40} 
         \ganttmilestone[inline]{M4}{40} \\
         %%%%%% DAY FOUR 13-16
-        \soll{Abschlussbericht}{41}{42}\\
-        \ist{41}{42} \\
-        \soll{Dokument formattieren/korigieren}{43}{48}\\
-        \ist{43}{48} 
+        \sollE{Abschlussbericht}{41}{42}\\
+        \istE{41}{42} \\
+        \sollE{Dokument formattieren/korigieren}{43}{48}\\
+        \istE{43}{48} 
         \ganttmilestone[inline]{M5}{48}
         %%%%%% EXPERTENBESUCHE
     \end{ganttchart}
@@ -125,12 +138,9 @@
 {\addtolength{\leftskip}{5.1cm}
 \begin{table}[!h]
     \begin{tabular}{L{0.05\textwidth}L{0.08\textwidth}L{0.05\textwidth}L{0.2\textwidth}}
-        \textbf{Legende} &      & \multicolumn{2}{l}{\textbf{Meilenstene}}                                 \\
-        Grau:            & soll & M1:                                      & Initialisierung abgeschlossen \\
-        Blau:            & ist  & M2:                                      & Konzeptphase abgeschlossen    \\
-                         &      & M3:                                      & POC erstellt    \\
-                         &      & M4:                                      & Realisierung abgeschlossen \\
-                         &      & M5:                                      & Projekt abgeschlossen \\
+        \textbf{Legende} &    \\
+        Dunkel:            & soll \\
+        Hell:            & ist   \\
     \end{tabular}
     \caption{Legende und Meilensteine vom Zeitplan}
 \end{table}
